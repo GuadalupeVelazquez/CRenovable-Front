@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #8AD684;
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    width: 100%;
+    height: 383px;
+    background-color: red;
+}
+.page-header{
+    padding:30px 0px 30px 75px ;
+    color: #ffffff;
+    font-family: Century Gothic;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.page-toolbar{
+    padding:30px 75px 30px 0px ;
+}
+.toolbar-list{
+    color: #ffffff;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.toolbar-link{
+    text-decoration: none;
+    color: #ffffff;
+}
