@@ -24,6 +24,15 @@ nav{
 
 
 }
+/* Logo y titulo */
+.logo{
+    display: flex;
+    gap: 1rem;
+}
+.logo>img{
+    width: 2rem;
+}
+/* Iconos de menu */
 .nav-icons{
     display: flex;
     justify-content: space-evenly;
