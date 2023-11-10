@@ -18,7 +18,7 @@
     flex: 0.5 0.25 128px;
 }
 .page-title .title{
-    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
     padding: 4px 8px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -39,13 +39,13 @@
     margin: 0 12vw;
     align-self: flex-start;
     flex-direction: column;
-    background-color: blueviolet;
+    background-color: rgba(214, 243, 210, 1);
  
 }
 .detail-header{
 
     justify-content: end;
-    background-color: blueviolet;
+    background-color:rgba(255, 255, 255, 1);
 
 }
 
@@ -53,7 +53,7 @@
     align-items: center;
     justify-content: center;
     flex: 1 1 40%;
-    background-color: blue;
+    background-color:rgba(255, 255, 255, 1);
     padding: 32px;
 }
 .product-image img{
@@ -63,10 +63,11 @@
     flex: 1 1 100%;
 }
 .product-description{
+    justify-content: space-between;
     flex: 1 1 60%;
     padding: 20px;
     flex-direction: column;
-    background-color:cadetblue;
+    background-color:rgba(255, 255, 255, 1);
 
 }
 .btn-agregar{
@@ -80,19 +81,21 @@
     border-radius: 50%;
     border: none;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 8px rgba(43, 44, 44, 0.733);
+   
 }
 .btn{
+    background-color:rgba(255, 255, 255, 1) ;
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 .btn:hover{
     background-color:rgba(138, 214, 132, 1);
+     box-shadow: 0px 4px 8px rgba(43, 44, 44, 0.733);
 }
 .carrito .btn-agregar,
 .btn-comprar{
     border: 2px solid rgba(138, 214, 132, 1);
     border-radius: 4px;
-    
 }
 
