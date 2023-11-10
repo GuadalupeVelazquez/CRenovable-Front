@@ -1,0 +1,43 @@
+.page-container{
+    background-color: purple;
+    height: 100vh;
+    flex-direction: column;
+}
+.pega-header{
+    background-color: aqua;
+    flex: 0 0 64px;
+}
+.page-body{
+    background-color: blue;
+    flex: 1 1 100%;
+    flex-direction: column;
+}
+.page-title{
+    flex: 0.5 0.25 128px;
+    background-color: orange;
+}
+.product-detail-wraper{
+    padding-top: 32px;
+    justify-content: center;
+    flex: 1 1 100%;
+    background-color: pink;
+}
+.product-detail{
+    align-self: flex-start;
+    flex-direction: column;
+    background-color: blueviolet;
+ 
+}
+.detail-header{
+    justify-content: end;
+    background-color: brown;
+}
+.detail-body{
+    background-color: green;
+}
+.product-image{
+ background-color: greenyellow;
+}
+.product-description{
+    background-color: goldenrod;
+}
