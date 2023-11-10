@@ -3,7 +3,7 @@
     height: 100vh;
     flex-direction: column;
 }
-.pega-header{
+.pega-header {
     background-color: aqua;
     flex: 0 0 64px;
 }
@@ -38,6 +38,15 @@
 .product-image{
  background-color: greenyellow;
 }
+.pega-header nav{
+    flex: 1 1 100%;
+}
 .product-description{
+    padding: 20px;
+    flex-direction: column;
     background-color: goldenrod;
+}
+.btn-agregar{
+    align-items: center;
+    gap: 10px;
 }
