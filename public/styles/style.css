@@ -1,3 +1,6 @@
+*{
+    font-family:'Century Gothic', sans-serif;
+}
 body{
     margin: 0;
     padding: 0;
@@ -16,7 +19,6 @@ nav{
     padding: 0 4rem;
     background-color: #8AD684;
     /* Ciclo Renovable */
-    font-family: 'Century Gothic';
     font-weight: normal;
     font-size: 1rem;
     line-height: 2rem;
@@ -43,7 +45,6 @@ nav{
 
 nav> ul> li>a{
     color: #f7f4f4;
-    font-family: 'Century Gothic';
     font-style: normal;
     font-weight: bold;
     font-size: 1rem;
