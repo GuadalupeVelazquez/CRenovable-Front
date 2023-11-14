@@ -14,21 +14,22 @@
 }
 
 .page-body {
-    background-color: aqua;
+    background-color: rgba(214, 243, 210, 1);
+
     flex: 1 1 100%;
     justify-content: center;
     align-items: center;
 }
 
 .edit {
-    background-color: blueviolet;
+    background-color: rgba(255, 255, 255, 1);
     padding: 10px;
     margin: 0 12vw;
-
+    border-radius: 6px;
 }
 
 .user {
-    background-color: orange;
+    background-color: rgba(255, 255, 255, 1);
     flex-direction: column;
     gap: 12px;
     padding: 0 32px;
@@ -51,7 +52,7 @@
 
 .form-edit {
     justify-content: center;
-    background-color: yellowgreen;
+
 }
 
 .form {
@@ -59,7 +60,7 @@
 }
 
 .input-colums {
-    background-color: olive;
+
     flex: 1 1 100%;
 
 }
@@ -70,14 +71,8 @@
     padding: 32px;
 }
 
-.input-culum-1 {
 
-    background-color: red;
-}
 
-.input-culum-2 {
-    background-color: blue;
-}
 
 .input {
     gap: 16px;
