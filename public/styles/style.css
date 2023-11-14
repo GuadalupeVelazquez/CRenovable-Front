@@ -1,40 +1,51 @@
+* {
+    font-family: 'Century Gothic', sans-serif;
+}
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
+
 /* nav */
-ul{
+ul {
     list-style: none;
 }
-li, a{
+
+li,
+a {
     text-decoration: none;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     height: 70px;
     padding: 0 4rem;
     background-color: #8AD684;
     /* Ciclo Renovable */
-    font-family: 'Century Gothic';
     font-weight: normal;
     font-size: 1rem;
     line-height: 2rem;
     color: #FFFFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+
 
 
 }
+
 /* Logo y titulo */
-.logo{
+.logo {
     display: flex;
     gap: 1rem;
 }
-.logo>img{
+
+.logo>img {
     width: 2rem;
 }
+
 /* Iconos de menu */
-.nav-icons{
+.nav-icons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -42,8 +53,7 @@ nav{
 
 }
 
-nav> ul> li>a{
-    color: #f7f4f4;
+nav>ul>li>a {
     font-family: 'Century Gothic';
     font-style: normal;
     font-weight: bold;
@@ -55,34 +65,40 @@ nav> ul> li>a{
     color: #FFFFFF;
 
 }
-a>img{
+
+a>img {
     margin-top: .3rem;
     height: 1.25rem;
 }
-a:hover{   
-    filter:brightness(0.55);
+
+a:hover {
+    filter: brightness(0.93);
 }
-#r{
+
+#r {
     font-weight: bolder;
     font-size: 1.55rem;
 }
+
 /* Submenu */
-nav > ul {
+nav>ul {
     height: 100%;
 }
-nav > ul > li{
+
+nav>ul>li {
     height: 100%;
     position: relative;
 }
 
-nav ul li ul{
+nav ul li ul {
     width: 200px;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 65px;
     left: -120px;
-    padding: 3px 0;
+    padding: 10px 0;
+    border-radius: 8px;
     visibility: hidden;
     opacity: 0;
     background-color: #FFFFFF;
@@ -90,13 +106,14 @@ nav ul li ul{
     z-index: 1;
     transition: all 300ms ease;
 }
-nav ul li:hover ul{
+
+nav ul li:hover ul {
     visibility: visible;
     opacity: 1;
     top: 55px;
 }
 
-nav ul li ul::before{
+nav ul li ul::before {
     content: ' ';
     position: absolute;
     top: -17px;
@@ -108,15 +125,16 @@ nav ul li ul::before{
     border-bottom: 17px solid white;
 }
 
-nav ul li ul li a{
+nav ul li ul li a {
     display: block;
-    font-size: 0.75rem;
-    padding: .2rem 1rem;
+    font-size: .81rem;
+    padding: .40rem 1rem;
     color: #454942;
     transition: all 300ms ease;
 }
-nav ul li ul li:hover{
-    background: #D9D9D9;
+
+nav ul li ul li:hover {
+    background: rgba(102, 194, 95, 0.6);
 }
 
 /* Fin nav */
