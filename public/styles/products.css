@@ -2,7 +2,6 @@ body{
     background-color:rgba(248, 253, 247, 1);
 }
 /* Estrucutra general de pagina */
-h1,
 p,
 a,
 li,
@@ -43,6 +42,7 @@ header>h1{
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 29px;
+    color: rgba(69, 73, 66, 1);
 
 }
 
@@ -111,13 +111,13 @@ a{
 aside>ul>li>a{
     margin-top:1rem;
 }
-li{
+aside li{
     display: flex;
     justify-content: space-between;
     margin-left: .75rem; /*Si le sacamos esto, los objetos de las listas quedan sobre el margen, pero creo que con el borde queda mejor. A probar*/
     list-style: none;
 }
-h2{
+aside h2{
     font-size: 1.4rem;
     padding-top: .5rem;
     padding-bottom: .25rem;
