@@ -441,6 +441,7 @@ nav {
 .logo {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .logo>img {
@@ -537,6 +538,9 @@ nav ul li ul li a {
 
 nav ul li ul li:hover {
     background: rgba(102, 194, 95, 0.6);
+}
+.navList{
+  display: flex;
 }
 
 /* 
