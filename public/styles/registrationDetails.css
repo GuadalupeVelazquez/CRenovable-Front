@@ -1,0 +1,62 @@
+body {
+    font-family: 'Century Gothic',
+        sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.page-container {
+    background: rgba(214, 243, 210, 1);
+    font-size: 24px;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.title {
+    background: rgba(214, 243, 210, 1);
+    align-items: center;
+    height: 90px;
+    margin: 0 0 64px 20px;
+    gap: 10px;
+}
+
+.login {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(138, 214, 132, 1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+
+    border: none;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.login a {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    background: rgba(69, 73, 66, 1);
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid;
+    border-color: antiquewhite;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block;
+}
+
+.login a:first-child {
+    margin-right: 10px;
+}
+
+.login a:hover {
+    background: rgba(138, 214, 132, 1);
+
+}
