@@ -1,12 +1,21 @@
 .page-container {
-    background-color: purple;
+
     height: 100vh;
     flex-direction: column;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Century Gothic',
+        sans-serif;
+}
+
+.page-container h3,
+h2,
+p,
+span {
+    font-family: 'Century Gothic',
+        sans-serif;
+    ;
 }
 
 .pega-header {
-    background-color: aqua;
     flex: 0 0 64px;
 }
 
@@ -18,7 +27,7 @@
 .page-title {
     align-items: center;
     background-color: rgba(214, 243, 210, 1);
-    flex: 0.5 0.25 112px;
+    flex: 0.5 0.25 90px;
 }
 
 .page-title .title {
@@ -30,13 +39,19 @@
 }
 
 .page-title .title h3 {
+    font-size: 36px;
     color: rgba(69, 73, 66, 1);
     font-weight: 100;
     margin: 0%;
 }
 
 .product-detail-wraper {
-    background-color: rgba(214, 243, 210, 1);
+    background-image: url(../images/userPerfVectores/vec_userP.svg);
+    background-color: #D6F3D2;
+
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: bottom;
     padding-top: 32px;
     justify-content: center;
     flex: 1 1 100%;
@@ -47,8 +62,8 @@
     margin: 0 20vw;
     align-self: flex-start;
     flex-direction: column;
-    background-color: rgba(214, 243, 210, 1);
-
+    width: 1077px;
+    height: 575px;
 }
 
 .detail-header {
@@ -84,23 +99,68 @@
 }
 
 .btn-agregar {
+    justify-content: center;
     align-items: center;
     gap: 12px;
-
+    border: 2px solid rgba(138, 214, 132, 1);
+    border-radius: 5px;
+    width: 174px;
+    height: 33px;
+    cursor: pointer;
 }
 
+.btn-comprar {
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(138, 214, 132, 1);
+    background-color: rgba(138, 214, 132, 1);
+    border-radius: 5px;
+    width: 174px;
+    height: 33px;
+    cursor: pointer;
+}
+
+
 .carrito {
-    gap: 14px;
+    gap: 20px;
 }
 
 .btn-romder {
-    border-radius: 100%;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(138, 214, 132, 1);
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.btn-x {
+/*.btn-x {
     color: rgb(13, 13, 14);
     height: 20px;
     width: 20px;
     border: none;
     text-align: center;
+}*/
+
+.btn-close {
+    background-color: rgba(138, 214, 132, 1);
+    border: none;
+    border-radius: 2px;
+    width: 25px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.div-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    align-items: center;
+}
+
+.textdescription {
+    text-align: justify;
+    text-justify: inter-word;
 }

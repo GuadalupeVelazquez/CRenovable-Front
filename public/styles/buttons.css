@@ -6,6 +6,7 @@
     padding: 6px;
     gap: 12px;
     border: 2px solid rgb(138, 214, 132, 1);
+    font-weight: bold;
 }
 
 .button-primary:hover {
