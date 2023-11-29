@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detalles de producto</title>
+    <link rel="shortcut icon" href="../../images/vec_logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="../../styles/style.css">
     <link rel="stylesheet" href="../../styles/flex.css">
     <link rel="stylesheet" href="../../styles/buttons.css">
@@ -27,7 +28,7 @@
                         <li><a href="#" title="Cerrá sesión">Cerrar Sesión</a></li>
                     </ul>
                 </li>
-                <li class="navList"><a href="#" title="¡Revisá tu carrito de compras!"><img src="../../images/vec_cart.svg" alt="Icono de carrito de compras" ></a></li>
+                <li class="navList"><a href="#" title="¡Revisá tu carrito de compras!"><img src="../../images/vec_cart.svg" alt="Icono de carrito de compras" > <span id="shopNum">0</span></a></li>
             
             </ul>
         </nav>
@@ -56,19 +57,19 @@
                             Necessitatibus hic doloremque distinctio nostrum? Eum.
                             <h4>medidas producto</h4>
                             <div class="btn-agregar flex">
-                                <button class="btn-romder btn flex button-primary">-</button>
-                                <h3>2</h3>
-                                <button class="btn-romder btn flex button-primary">+</button>
+                                <button class="btn-romder btn flex button-primary res">-</button>
+                                <h3 class="cantidad">2</h3>
+                                <button class="btn-romder btn flex button-primary sum">+</button>
                             </div>
                             <div class="carrito flex">
-                                <button class="btn-agregar flex btn button-primary">Agregar al carrrito</button>
+                                <button class="btn-agregar flex btn button-primary add">Agregar al carrrito</button>
                                 <button class="btn-comprar flex btn button-primary">Comprar ahora</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <script src="../../scripts/shopFun.js"></script>
         </div>
     </div>
 </body>

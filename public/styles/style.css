@@ -473,8 +473,25 @@ nav>ul>li>a {
 a>img {
     margin-top: .3rem;
     height: 1.3rem;
+    position: relative;
 }
-
+#shopNum{
+  display:flex;
+  height: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position:absolute;
+  top: 13px;
+  right: 6px;
+  background-color:rgba(244, 82, 82, 1);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 3px;
+  padding-left: 5px;
+  
+}
 a:hover {
     filter: brightness(0.93);
 }
