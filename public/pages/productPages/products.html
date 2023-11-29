@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/style.css">
     <link rel="stylesheet" href="../../styles/products.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../../images/vec_logo.svg" type="image/x-icon">
+    <title>Productos</title>
 </head>
 <body>
 <!-- nav -->
@@ -23,7 +24,7 @@
                 <li><a href="#" title="Cerrá sesión">Cerrar Sesión</a></li>
             </ul>
         </li>
-        <li class="navList"><a href="#" title="¡Revisá tu carrito de compras!"><img src="../../images/vec_cart.svg" alt="Icono de carrito de compras" ></a></li>
+        <li class="navList"><a href="#" title="¡Revisá tu carrito de compras!"><img src="../../images/vec_cart.svg" alt="Icono de carrito de compras" > <span id="shopNum">  0</span></a></li>
     
     </ul>
 </nav>
@@ -44,13 +45,13 @@
         
         <h2>Costo de envio</h2>
         <ul>
-            <li class="space">Gratis <span class="toogleOn"><span class="ball ballOn"> </span></span></li>
+            <li id="liG" class="space">Gratis <span id="bg-gr"class="toogleOn"><span id="ball-gr"class="ball ballOn"> </span></span></li>
         </ul>
         
         <h2>Tipo de entrega</h2>
         <ul>
-            <li class="space">Retiro en el local <span class="toogleOff"><span class="ball ballOff"> </span></span></li>
-            <li class="space">Con envio <span class="toogleOn"><span class="ball ballOn"> </span></span></li>
+            <li id="liRet" class="space">Retiro en el local <span id="bg-ret" class="toogleOff"><span id="ball-ret" class="ball ballOff"> </span></span></li>
+            <li id="liEn" class="space">Con envio <span id="bg-en" class="toogleOn"><span id="ball-en" class="ball ballOn"> </span></span></li>
         </ul>
 
     </aside>
@@ -63,17 +64,21 @@
                 <h3>Maceta Orgánica</h3>
                 <p>Maceta biodegradable 20 x 20 cm, material reciclado.</p>
                 <p id="precio">$ 1.500</p>
-                <button>- </button><p id="cantidad"> 1</p><button>+ </button>
+                <button class="res">- </button><p class="cantidad"> 1</p><button class="sum">+ </button>
+                <button class="add">Agregar al carrito</button>
             </div>
             <div class="prod">
                 <img src="../../images/products/bottle.jpg" alt="Lampara con botella">
                 <h3>Lampara de botella</h3>
                 <p>Lampara botella 20 x 20 cm, 100% material reciclado.</p>
                 <p id="precio">$ 2.500</p>
-                <button>- </button><p id="cantidad"> 1</p><button>+ </button>
+                <button>- </button><p class="cantidad"> 1</p><button>+ </button>
+                <button class="add">Agregar al carrito</button>
             </div>
         </div>
     </article>
 </div>
+
+<script src="../../scripts/shopFun.js"></script>
 </body>
 </html>
