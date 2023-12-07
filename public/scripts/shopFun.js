@@ -104,9 +104,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         s += parseInt(document.getElementById(id).innerHTML);
         shop.innerHTML = s;
     }
-    
 });
-
 
     const g=document.querySelector('#liG'),
     ret=document.querySelector('#liRet'),

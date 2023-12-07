@@ -76,3 +76,10 @@ body{
     margin-right: .5rem;
 }
 
+@media(min-width:1060px){
+    .userCard{
+        max-height: 100vb;
+        height: 550px;
+    }
+
+}
