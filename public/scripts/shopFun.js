@@ -1,71 +1,63 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const productos = [{
-        "_id": {
-            "$oid": "65668815cbdc43de50d8ec33"
-        },
-        "name": "Maceta orgánica",
-        "description": "Maceta biodegradable, 20 x 20 cm, 100% material reciclado",
-        "price": 1500,
-        "image": "",
-        "category": "Decoración de exteriores",
-        "__v": 0,
-        "i": "2"
-    },
-    {
-        "_id": {
-            "$oid": "65668931cbdc43de50d8ec35"
-        },
-        "name": "Lampara de botella",
-        "description": "Lampara botella 20 x 20 cm\n100% material reciclado.",
-        "price": 2500,
-        "image": "",
-        "category": "Decoración de exteriores",
-        "__v": 0,
-        "i": "3"
-    },
-    {
-        "_id": {
-            "$oid": "65668936cbdc43de50d8ec43"
-        },
-        "name": "Maceta biodegradable",
-        "description": "Maceta biodegradable, 20 x 20 cm, 100% material reciclado",
-        "price": 1000,
-        "image": "",
-        "category": "exteriores",
-        "__v": 0,
-        "i": "5"
-    },
-    {
-        "_id": {
-            "$oid": "65668937cbdc43de50d8ec45"
-        },
-        "name": "Maceta biodegradable",
-        "description": "Maceta biodegradable, 20 x 20 cm, 100% material reciclado",
-        "price": 1000,
-        "image": "",
-        "category": "exteriores",
-        "__v": 0,
-        "i": "6"
-    }];
+document.addEventListener('DOMContentLoaded', async () => {
 
+    try {
+        const category = window.location.pathname.split('/').pop();
+
+        const response = await fetch(`http://localhost:3000/getProductsByCategory/${category}`);
+        if (!response.ok) {
+            throw new Error('Error al obtener productos');
+            console.log('Acá llegamos')
+        }
+
+        const productos = await response.json();
+
+    //Cambiar titulo de pagina
+
+    const title = document.querySelector("#catTitle");
+    title.innerHTML=`${category}`
+    if(`${category}`== 'Perfumes%20y%20fragancias'){
+        let PF= document.querySelector('#PF')
+        PF.style.fontWeight = 'Semi Bold';
+        PF.style.fontSize='17px'; 
+        title.innerHTML=`Perfumes y Fragancias`
+
+    } else if (`${category}`== 'Decoraci%C3%B3n%20de%20exteriores'){
+        let DE= document.querySelector('#DE')
+        DE.style.fontWeight = 'Semi Bold';
+        DE.style.fontSize='17px';
+        title.innerHTML=`Decoración de Exteriores`
+    }else if (`${category}`== 'Higiene%20personal'){
+        let HP= document.querySelector('#HP')
+        HP.style.fontWeight = 'Semi Bold';
+        HP.style.fontSize='17px';
+        title.innerHTML=`Higiene Personal`
+    }else{
+        title.innerHTML=`Nuestros Productos`
+    }
+
+    //Cards
     const div = document.querySelector(".containerProd");
-    productos.forEach(producto => {
+
+    productos.forEach((producto, index) => {
+        console.log('Acá llegamos')
         const proDiv = `<div class="prod">
         <img src="../../images/products/macetas.webp" alt="Maceta">
         <h3>${producto.name}</h3>
         <p>${producto.description}</p>
         <p id="precio">$ ${producto.price}</p>
-        <button class="res" data-id="${producto.i}">- </button><p id="${producto.i}" class="cantidad"> 0 </p><button class="sum" data-id="${producto.i}">+ </button>
-        <button class="add" data-id="${producto.i}">Agregar al carrito</button>
+        <button class="res" data-id="cantidad-${index}">- </button><p id="cantidad-${index}" class="cantidad"> 1 </p><button class="sum" data-id="cantidad-${index}">+ </button>
+        <button class="add" data-id="cantidad-${index}">Agregar al carrito</button>
         </div>`;
         div.innerHTML += proDiv;
     });
+    }catch(error){
+        console.error('Error al obtener productos:', Error)
+    }
 
     const shop = document.querySelector('#shopNum'),
         btnRes = document.querySelectorAll('.res'),
         btnSum = document.querySelectorAll('.sum'),
-        add = document.querySelectorAll('.add'),
-        c = document.querySelectorAll('.cantidad');
+        add = document.querySelectorAll('.add');
 
     // agregar productos
     btnSum.forEach(btn => {
@@ -91,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Sumar
     function sum(id) {
         let cantidad = parseInt(document.getElementById(id).innerHTML);
-        if (cantidad >= 0) {
+        if (cantidad >= 1) {
             cantidad += 1;
         }
         document.getElementById(id).innerHTML = cantidad;
@@ -100,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Restar
     function res(id) {
         let cantidad = parseInt(document.getElementById(id).innerHTML);
-        if (cantidad > 0) {
+        if (cantidad > 1) {
             cantidad -= 1;
         }
         document.getElementById(id).innerHTML = cantidad;
@@ -112,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         s += parseInt(document.getElementById(id).innerHTML);
         shop.innerHTML = s;
     }
+    
 });
 
 
