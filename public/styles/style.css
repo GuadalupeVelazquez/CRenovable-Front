@@ -467,6 +467,7 @@ nav>ul>li>a {
     height: 100%;
     padding: 14px;
     color: #FFFFFF;
+    cursor: pointer;
 
 }
 
@@ -474,6 +475,7 @@ a>img {
     margin-top: .3rem;
     height: 1.3rem;
     position: relative;
+    cursor: pointer;
 }
 #shopNum{
   display:flex;
