@@ -157,4 +157,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
         shop.textContent = totalQuantity.toString();
     }
+    
+    const g=document.querySelector('#liG'),
+    ret=document.querySelector('#liRet'),
+    e=document.querySelector('#liEn'),
+
+    sG=document.querySelector('#bg-gr'),
+    sRet=document.querySelector('#bg-ret'),
+    sE=document.querySelector('#bg-en'),
+
+    bG=document.querySelector('#ball-gr'),
+    bRet=document.querySelector('#ball-ret'),
+    bE=document.querySelector('#ball-en');
+
+// filtros
+
+g.addEventListener('click', () => {
+    toggle(sG, 'toogleOn', 'toogleOff');
+    toggle(bG, 'ballOff', 'ballOn');
+});
+ret.addEventListener('click', () => {
+    toggle(sRet, 'toogleOn', 'toogleOff');
+    toggle(bRet, 'ballOff', 'ballOn');
+});
+e.addEventListener('click', () => {
+    toggle(sE, 'toogleOn', 'toogleOff');
+    toggle(bE, 'ballOff', 'ballOn');
+});
+
+
+//mover botones
+
+function toggle(span, cl1, cl2) {
+    if (span.classList.contains(cl1)) {
+        span.classList.remove(cl1);
+        span.classList.add(cl2);
+    } else {
+        span.classList.remove(cl2);
+        span.classList.add(cl1);
+    }
+}
 });

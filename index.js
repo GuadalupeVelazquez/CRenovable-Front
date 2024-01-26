@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 app.get('/products/:category', (req, res) => {
   res.sendFile(__dirname + '/public/pages/productPages/products.html');
 });
-app.get('/products/detail', (req, res) => {
+app.get('/products/unico/details', (req, res) => {
     res.sendFile(__dirname + '/public/pages/productPages/productDetail.html');
 });
 app.get('/registrationRequest', (req, res) => {
