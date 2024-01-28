@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/homePage.html');
+    res.sendFile(__dirname + '/public/pages/homePage.html');/*homePage.html*/
 });
 app.get('/products/:category', (req, res) => {
   res.sendFile(__dirname + '/public/pages/productPages/products.html');
@@ -13,10 +13,10 @@ app.get('/products/:category', (req, res) => {
 app.get('/products/detail', (req, res) => {
     res.sendFile(__dirname + '/public/pages/productPages/productDetail.html');
 });
-app.get('/registrationRequest', (req, res) => {
+app.get('/createUser', (req, res) => {
   res.sendFile(__dirname + '/public/pages/registrationRequest.html');
 });
-app.get('/login', (req, res) => {
+app.get('/loginAndRegister', (req, res) => {
     res.sendFile(__dirname + '/public/pages/loginAndRegister.html');
 });
 app.get('/user', (req, res) => {
