@@ -31,8 +31,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         HP.style.fontWeight = 'Semi Bold';
         HP.style.fontSize='17px';
         title.innerHTML=`Higiene Personal`
-    }else{
-        title.innerHTML=`Nuestros Productos`
+    }else if (`${category}`== 'Cuidado%20personal'){
+        let CP= document.querySelector('#CP')
+        CP.style.fontWeight = 'Semi Bold';
+        CP.style.fontSize='17px';
+        title.innerHTML=`Cuidado Personal`
     }
 
     //Cards
