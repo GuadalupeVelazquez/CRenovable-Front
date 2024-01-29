@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         productos.forEach((producto) => {
             console.log('Acá llegamos');
             const proDiv = `<div class="prod">
-                <img src="../../images/products/macetas.webp" alt="Maceta">
-                <h3>${producto.name}</h3>
+                <img src="${producto.image}" alt="${producto.name}">
+                <h3>${producto.name} <a href="/products/unico/${producto._id}">+ info</a></h3>
                 <p>${producto.description}</p>
                 <p id="precio">$${producto.price}</p>
                 <button class="res" data-id="${producto._id.toString()}">- </button>
