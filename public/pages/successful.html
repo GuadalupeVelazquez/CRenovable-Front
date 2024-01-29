@@ -20,6 +20,12 @@
         <button onclick="redirigir('/products/Cuidado%20personal')">Seguir viendo</button>
     </div>
 
+    <script>
+        function vaciarLocalStorage() {
+            localStorage.clear();
+        }
+        document.querySelector('button').addEventListener('click', vaciarLocalStorage);
+    </script>
     <script src="../scripts/redireccion.js"></script>
 </body>
 </html>
