@@ -2,6 +2,7 @@ function redirigir(page) {
     window.location.href = page;
 }
 
+
 function realizarRegistro() {
     const nombreUsuario = document.getElementById('nombreRegistro').value;
     const correoElectronico = document.getElementById('emailRegistro').value;
