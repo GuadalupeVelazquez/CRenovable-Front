@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/pages/homePage.html');
 });
 app.get('/products/:category', (req, res) => {
-    res.sendFile(__dirname + `/public/pages/productPages/products.html`);
+  res.sendFile(__dirname + '/public/pages/productPages/products.html');
 });
 app.get('/products/detail', (req, res) => {
     res.sendFile(__dirname + '/public/pages/productPages/productDetail.html');

@@ -16,7 +16,7 @@
         <h1><a href="http://localhost:3001/" id="r">Ciclo <span id="r">Renovable</span></a></h1>
     </div>
     <ul class="nav-icons">
-        <li class="navList"><a href="/products">Productos</a></li>
+        <li class="navList"><a href="#">Productos</a></li>
         <li class="navList"><a href="#" title="¡Ingresá a tu perfil!"><img src="../../images/vec_perfil.svg" alt="Icono de perfil" ></a>
             <ul>
                 <li><a href="/user" title="Dirigite a tu perfil">Mi perfil</a></li>
@@ -37,10 +37,11 @@
     <aside> 
         <h2>Categorias</h2>
         <ul>
-            <li><a href="#">Cuidado Personal</a><li>
-            <li><a href="#">Decoración de exterior</a></li>
-            <li><a href="#">Higiene Personal</a><li>
-            <li><a href="#">Perfumes y fragancias</a></li>
+            <li><a id="CP" href="/products/Cuidado%20personal">Cuidado Personal</a><li> 
+                <!-- Ver link de cuidado personal --> 
+            <li><a id="DE" href="/products/Decoración%20de%20exteriores">Decoración de exterior</a></li>
+            <li><a id="HP" href="/products/Higiene%20personal">Higiene Personal</a><li>
+            <li><a id="PF" href="/products/Perfumes%20y%20fragancias#">Perfumes y fragancias</a></li>
         </ul>
         
         <h2>Costo de envio</h2>
@@ -57,8 +58,8 @@
     </aside>
     <!-- Card producto -->
     <article>
-        <h2>Decoración de exterior</h2>
-        <div id="containerProd" class="containerProd">    
+        <h2 id="catTitle">Nuestros productos</h2>
+        <div class="containerProd">
         </div>
     </article>
 </div>
