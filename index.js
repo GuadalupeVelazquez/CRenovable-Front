@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/pages/homePage.html');
 });
-app.get('/products', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/productPages/products.html');
+app.get('/products/:category', (req, res) => {
+    res.sendFile(__dirname + `/public/pages/productPages/products.html`);
 });
 app.get('/products/detail', (req, res) => {
     res.sendFile(__dirname + '/public/pages/productPages/productDetail.html');
