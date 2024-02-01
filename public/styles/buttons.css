@@ -1,15 +1,35 @@
 .button-primary {
-    background-color: rgba(138, 214, 132, 1);
+    background-color: rgba(255, 255, 255, 1);
+    color: #454942; 
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease, color 0.3s ease; 
     border-radius: 5px;
-    padding: 6px;
+    padding: 6px 18px;
     gap: 12px;
     border: 2px solid rgb(138, 214, 132, 1);
-    font-weight: bold;
+    
 }
 
 .button-primary:hover {
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4px 8px rgba(43, 44, 44, 0.733);
+
+    background-color: rgb(138, 214, 132, 1); 
+    color: rgba(255, 255, 255, 1);
 }
+
+.buttonSave{
+    border: 2px solid rgb(138, 214, 132, 1);
+    background-color: rgb(138, 214, 132, 1); 
+    color: #454942; 
+    cursor: pointer;
+    transition: 0.3s ease, color 0.3s ease; 
+    border-radius: 5px;
+    padding: 6px 18px;
+    gap: 12px;
+    font-weight: bold;
+}
+
+.buttonSave:hover {
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadido un sombreado más pronunciado al hacer hover */
+}
+

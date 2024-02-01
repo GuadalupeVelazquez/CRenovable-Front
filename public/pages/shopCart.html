@@ -33,13 +33,15 @@
     <table>
         <tr>
             <th>Producto</th>
-            <th>Cantidad</th>
             <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th></th>
         </tr> 
     </table>  
 </div>
-
-<h3 class="totalCompra">Total de la compra: $1000</h3>
+<button id="clean">Vaciar Carrito</button>
+<h3 class="totalCompra">Total de la compra: <span id="total">$0</span> </h3> 
 
 
 <div class="container">
@@ -68,7 +70,7 @@
             <button class="card-option" type="button"></button> Visa
         </div>
 
-        <input class="buttonShop" type="submit" value="Finalizar Pago">
+        <a href="/successful">Finalizar Pago</a>
     </form>
 
     <!-- Formulario para tarjeta de débito -->
@@ -94,77 +96,118 @@
             <button class="card-option" type="button"></button> Visa
         </div>
 
-        <input class="buttonShop" type="submit" value="Finalizar Pago">
+        <a href="/successful">Finalizar Pago</a>
     </form>
 </div>
 
 
-
-</body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const productos = [
-            {
-                "Producto": "Maceta biodegradable",
-                "Cantidad": 1,
-                "Precio": 1000
-            },
-            {
-                "Producto": "Lámpara botella",
-                "Cantidad": 2,
-                "Precio": 2000
-            },
-            {
-                "Producto": "Cepillo de dientes bambú",
-                "Cantidad": 3,
-                "Precio": 1000
-            },
-            {
-                "Producto": "Perfume solido",
-                "Cantidad": 1,
-                "Precio": 1000
-            },
-            {
-                "Producto": "Crema de coco",
-                "Cantidad": 2,
-                "Precio": 2000
-            },
-            {
-                "Producto": "Perfume solido",
-                "Cantidad": 3,
-                "Precio": 2000
-            }
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        ];
-
+        // Obtener la referencia a la tabla
         const tabla = document.querySelector("table");
-        productos.forEach(producto => {
+        let totalCompra = 0;
+
+        // Agregar filas del carrito a la tabla
+        storedCart.forEach(producto => {
+            // Calcular el subtotal para el producto actual y sumarlo al total de la compra
+            const subtotalProducto = producto.quantity * producto.precio;
+            totalCompra += subtotalProducto;
+
+            // Agregar la fila a la tabla con el subtotal
             const fila = `<tr>
-                <td>${producto.Producto}</td>
-                <td>${producto.Cantidad}</td>
-                <td>$${producto.Precio}</td>
+                <td>${producto.name}</td>
+                <td>$ ${producto.precio}</td>
+                <td>${producto.quantity}</td>
+                <td>$ ${subtotalProducto}</td>
+                <td> <button class='delete' onclick="eliminarElementoDelCarrito('${producto.id}')"> x </button> </td>
             </tr>`;
+
+            // Agregar la fila a la tabla
             tabla.innerHTML += fila;
         });
 
-        const totalCompra = productosUnicos.reduce((total, producto) => total + producto.Precio, 0);
+        // Obtener el elemento donde mostrar el total de la compra
+        const totalElemento = document.querySelector("#total");
 
-        const totalElemento = document.querySelector("h3");
-        totalElemento.textContent = `Total de la compra: $${totalCompra}`;
+        // Actualizar el texto con el total de la compra
+        totalElemento.innerHTML = `$${totalCompra}`;
     });
-
 
     const cardOptions = document.querySelectorAll('.card-option');
 
-cardOptions.forEach(option => {
-    option.addEventListener('click', () => {
-        cardOptions.forEach(otherOption => {
-            if (otherOption !== option) {
-                otherOption.classList.remove('selected');
-            }
+    cardOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            cardOptions.forEach(otherOption => {
+                if (otherOption !== option) {
+                    otherOption.classList.remove('selected');
+                }
+            });
+            option.classList.toggle('selected');
         });
-        option.classList.toggle('selected');
     });
-});
+
+    document.getElementById('clean').addEventListener('click', function () {
+        // Limpia el Local Storage
+        if (localStorage.length > 0) {
+            const confirmacion = confirm('¿Estás seguro de vaciar el carrito?');
+            if (confirmacion) {
+                // Limpia el Local Storage si el usuario confirma
+                localStorage.clear();
+                alert('Su carrito se ha vaciado exitosamente.');
+                // Recargar la página
+                location.reload();
+            } else {
+                alert('Operación cancelada con exito, puede seguir con su compra.');
+            }
+        } else {
+            alert('No hay productos en el carrito')
+        }
+    });
+
+    function eliminarElementoDelCarrito(idProducto) {
+    try {
+        // Obtener el carrito del localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Encontrar el índice del producto en el carrito
+        const indiceProducto = cartItems.findIndex(item => item.id === idProducto);
+
+        // Verificar si el producto está en el carrito
+        if (indiceProducto !== -1) {
+            // Pedir confirmación al usuario antes de eliminar
+            const confirmacion = confirm('¿Estás seguro de eliminar este producto del carrito?');
+
+            if (confirmacion) {
+                // Eliminar el producto del carrito
+                cartItems.splice(indiceProducto, 1);
+
+                // Actualizar el carrito en el localStorage
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+
+                actualizarInterfazDelCarrito();
+                alert('Producto eliminado del carrito correctamente.');
+            } else {
+                // Alerta indicando que la eliminación fue cancelada
+                alert('Operación cancelada. El producto no fue eliminado del carrito.');
+            }
+        } else {
+            console.log('El producto no está en el carrito.');
+        }
+    } catch (error) {
+        console.error('Error al eliminar el producto del carrito:', error);
+    }
+}
+
+
+    function actualizarInterfazDelCarrito() {
+        // Puedes agregar aquí la lógica para actualizar la interfaz del carrito después de eliminar un producto
+        // Recargar la página o realizar otras acciones según tus necesidades
+        location.reload();
+        console.log('Interfaz del carrito actualizada.');
+    }
 </script>
+
+</body>
 </html>
