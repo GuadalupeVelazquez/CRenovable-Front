@@ -52,6 +52,7 @@ body{
     font-weight: 700;
     line-height: 20px;
     color: rgba(69, 73, 66, 1);
+    cursor: pointer;
 }
 .userInfo{
     padding-bottom: .5rem;
