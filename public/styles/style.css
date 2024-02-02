@@ -344,81 +344,101 @@ img.imgmb{
 
 /* footer */
 
+.footerh {
+    font-family: 'Century Gothic', sans-serif;
+    color: #fff;
+    font-weight: normal;
+    margin-left: 0;
+}
 
 .footer {
-  background:  #8AD684;
-  padding: 30px 45px;
-  text-align: center;
-  margin-top: 50px;
+    background:  #8AD684;
+    padding: 30px 45px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .containerfooter {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
 }
 
-.columna {
+.columna-izquierda{
   flex: 1;
-  text-align: left;
+  text-align: start;
+}
+
+.columna-centro,
+.columna-derecha {
+    flex: 1;
+    text-align: left;
 }
 
 .logo-container {
-  display: flex;
-  align-items: baseline;
+    display: flex;
+    align-items: baseline;
 }
 
 .logo {
-  margin-right: 10px; /* Ajusta el espacio entre el logo y el texto según sea necesario */
+    margin-right: 10px; 
 }
 
 .footerh2 {
-  font-family: 'Century Gothic', sans-serif;
-  color: #fff; /* Blanco */
-  margin-bottom: 10px;
-  font-weight: normal; /* Quitar negrita */
-  margin-left: 0; /* Ajustado el margen izquierdo a cero */
-  
+    font-family: 'Century Gothic', sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: normal;
+    margin-left: 0;
 }
 
 .redes {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .redes a {
-  text-decoration: none;
-  color: #454942;
-  display: block;
-  margin-bottom: 5px;
-  transition: color 0.3s ease; 
+    text-decoration: none;
+    color: #454942;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease; 
 }
 
 .redes img {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .redes a:hover {
-  color: #ffffff; 
+    color: #ffffff; 
 }
 
+.logoFooter{
+ 
+  margin-right: -200px;
+}
+
+
+
 .contacto {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .contacto a {
-  text-decoration: none;
-  color: #454942;
-  display: block;
-  transition: color 0.3s ease; 
+    text-decoration: none;
+    color: #454942;
+    display: block;
+    transition: color 0.3s ease; 
+    margin-bottom: 10px;
 }
 
 .contacto img {
-  margin-right: 5px;
+    margin-right: 5px;
+    max-width: 21px;
+    margin-bottom: -5px;
 }
 
 .contacto a:hover {
-  color: #ffffff; 
+    color: #ffffff; 
 }
 
 /* nav */
