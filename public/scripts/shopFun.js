@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log('Acá llegamos');
             const proDiv = `<div class="prod">
                 <img src="${producto.image}" alt="${producto.name}">
-                <h3>${producto.name} <a href="/products/unico/${producto._id}">+ info</a></h3>
+                <div class="flex"><h3>${producto.name}</h3> <a class="info" title="¡Más información del producto!" href="/products/unico/${producto._id}">+info</a></div>
                 <p>${producto.description}</p>
                 <p id="precio">$${producto.price}</p>
                 <button class="res" data-id="${producto._id.toString()}">- </button>
