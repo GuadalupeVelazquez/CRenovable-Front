@@ -41,7 +41,7 @@ body {
 }
 
 
-.login a {
+.login button {
 
     width: 100%;
     margin-top: 10px;
@@ -59,11 +59,11 @@ body {
     ;
 }
 
-.login a:first-child {
+.login button:first-child {
     margin-right: 10px;
 }
 
-.login a:hover {
+.login button:hover {
     background: rgba(138, 214, 132, 1);
 
 }
