@@ -158,8 +158,8 @@ article>h2{
     height: 195px;
     padding-bottom: .75rem;
 }
-.prod>h3{
-    font-size: 15px;
+.prod div h3{
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 0;
 }
@@ -200,5 +200,31 @@ button:hover{
     display: inline-block;
     font-size: 30px;
     font-weight: 750;
-    line-height: 30px;
+}
+
+.info{
+    display: inline-block;
+    height: 17px;
+    width: 2.4rem;
+    font-size: small;
+    font-weight: 550;
+    border-style: none;
+    border-radius: .2rem;
+    background: #f4fff4;
+    padding: .10rem;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+
+}
+.info:hover{
+    padding-left: 0.22rem;
+    padding-right: 0.22rem;
+    border-radius: .5rem;
+    background: #89d68494;
+}
+
+.flex {
+    display: flex;
+    justify-content:space-between;
+    margin-right: 1rem;
 }
