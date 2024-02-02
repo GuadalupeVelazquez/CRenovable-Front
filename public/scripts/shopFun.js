@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const category = window.location.pathname.split('/').pop();
 
         const response = await fetch(`http://localhost:3000/getProductsByCategory/${category}`);
+        console.log(category)
         if (!response.ok) {
             throw new Error('Error al obtener productos');
             console.log('Acá llegamos');
