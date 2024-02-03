@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
 
           if (response.ok) {
-              window.location.href = 'http://localhost:3001';
+              window.location.href = '/';
           } else {
               console.error('Error al editar el usuario');
           }
