@@ -16,10 +16,13 @@
         </div>
         <div class="login flex ">
             <p>Para poder completar tu compra debes estar registrado</p>
-            <a href="loginAndRegister.html"> Iniciar Sesion</a>
-            <a href="">Registrate</a>
+            <button onclick="redirigir('/loginAndRegister?mode=login')">Iniciar Sesión</button>
+            <button onclick="redirigir('/loginAndRegister?mode=register')">Registrarse</button>
         </div>
     </div>
 </body>
+<script src="../scripts/redireccion.js"></script>
 
 </html>
+<!-- <a href="loginAndRegister.html"> Iniciar Sesion</a>
+    <a href="loginAndRegister.html">Registrate</a>  -->

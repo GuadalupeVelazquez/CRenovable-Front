@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="../images/vec_logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="../styles/userProfile.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/user.js"></script>
     <title>Tu Perfil</title>
 
 
@@ -34,20 +35,22 @@
     <section class="userCard">
 
         <div class="userImg">
-
-            <img src="../images/perf1.jpg" alt="foto perfil">
-            
-            <p class="placeUser"> <span id="nameUser">Laura Gutierrez</span><br><br>
-            <img src="../images/userPerfVectores/vec_pointer.svg" alt="">Buenos Aires, Argentina.</p>
-            <button id="editUser" onclick="redirigir('/userEdit')">Editar tu perfil <img src="../images/userPerfVectores/vec_pencil.svg" alt="Lapiz de edición"></button>
+            <img src="../img/portada-foto-perfil-redes-sociales-consejos 5.jpg" alt="foto perfil">
+            <p class="placeUser">
+                <span id="nameUser"></span><br><br>
+                <img src="../images/userPerfVectores/vec_pointer.svg" alt="">
+                <span id="location">Buenos Aires, Argentina.</span>
+            </p>
+            <button id="editUser" onclick="redirigir('/userEdit')">Editar tu perfil
+                <img src="../images/userPerfVectores/vec_pencil.svg" alt="Lapiz de edición">
+            </button>
         </div>
-
+    
         <div class="boxInfo">
-            <p class="userInfo"><img src="../images/userPerfVectores/vec_email.svg" alt="Icono email">LauraGutierres12@gmail.com</p>
-            <p class="userInfo"><img src="../images/userPerfVectores/vec_phone.svg" alt="Icono telefono">221 6579809</p>
-            <p class="userInfo"><img src="../images/userPerfVectores/vec_key.svg" alt="Icono contraseña">**********</p>
+            <p class="userInfo"><img src="../images/userPerfVectores/vec_email.svg" alt="Icono email"> <span id="email"></span></p>
+            <p class="userInfo"><img src="../images/userPerfVectores/vec_phone.svg" alt="Icono telefono"> <span id="telephone"></span></p>
+            <p class="userInfo"><img src="../images/userPerfVectores/vec_key.svg" alt="Icono contraseña"> **********</p>
         </div>
-    </section>
     <script src="../scripts/redireccion.js"></script>
 </body>
 </html>
