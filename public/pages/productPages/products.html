@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,61 +9,71 @@
     <link rel="shortcut icon" href="../../images/vec_logo.svg" type="image/x-icon">
     <title>Productos</title>
 </head>
+
 <body>
-<!-- nav -->
-<nav>
-    <div class="logo">
-        <img src="../../images/vec_logo.svg" alt="Logo Ciclo Renovable">
-        <h1><a href="http://localhost:3001/" id="r">Ciclo <span id="r">Renovable</span></a></h1>
-    </div>
-    <ul class="nav-icons">
-        <li class="navList"><a href="#">Productos</a></li>
-        <li class="navList"><a href="#" title="¡Ingresá a tu perfil!"><img src="../../images/vec_perfil.svg" alt="Icono de perfil" ></a>
-            <ul>
-                <li><a href="/user" title="Dirigite a tu perfil">Mi perfil</a></li>
-                <li><a href="#" title="Mirá tus compras anteriores">Mis compras</a></li>
-                <li><a href="http://localhost:3000/logout" title="Cerrá sesión">Cerrar Sesión</a></li>
-            </ul>
-        </li>
-        <li class="navList"><a href="/shop" title="¡Revisá tu carrito de compras!"><img src="../../images/vec_cart.svg" alt="Icono de carrito de compras" > <span id="shopNum">  0</span></a></li>
-    
-    </ul>
-</nav>
-<!-- header -->
-<header>
-    <h1>¡Aquí podrás encontrar nuestros productos hechos con materiales 100% reciclables! Echa un vistazo</h1>
-</header>
-<!-- aside -->
-<div id="container">
-    <aside> 
-        <h2>Categorias</h2>
-        <ul>
-            <li><a id="CP" href="/products/Cuidado%20personal">Cuidado Personal</a><li> 
-            <li><a id="DE" href="/products/Decoración%20de%20exteriores">Decoración de exterior</a></li>
-            <li><a id="HP" href="/products/Higiene%20personal">Higiene Personal</a><li>
-            <li><a id="PF" href="/products/Perfumes%20y%20fragancias#">Perfumes y fragancias</a></li>
-        </ul>
-        
-        <h2>Costo de envio</h2>
-        <ul>
-            <li id="liG" class="space">Gratis <span id="bg-gr"class="toogleOn"><span id="ball-gr"class="ball ballOn"> </span></span></li>
-        </ul>
-        
-        <h2>Tipo de entrega</h2>
-        <ul>
-            <li id="liRet" class="space">Retiro en el local <span id="bg-ret" class="toogleOff"><span id="ball-ret" class="ball ballOff"> </span></span></li>
-            <li id="liEn" class="space">Con envio <span id="bg-en" class="toogleOn"><span id="ball-en" class="ball ballOn"> </span></span></li>
-        </ul>
-
-    </aside>
-    <!-- Card producto -->
-    <article>
-        <h2 id="catTitle">Nuestros productos</h2>
-        <div class="containerProd">
+    <!-- nav -->
+    <nav>
+        <div class="logo">
+            <img src="../../images/vec_logo.svg" alt="Logo Ciclo Renovable">
+            <h1><a href="http://localhost:3001/" id="r">Ciclo <span id="r">Renovable</span></a></h1>
         </div>
-    </article>
-</div>
+        <ul class="nav-icons">
+            <li class="navList"><a href="#">Productos</a></li>
+            <li class="navList"><a href="#" title="¡Ingresá a tu perfil!"><img src="../../images/vec_perfil.svg"
+                        alt="Icono de perfil"></a>
+                <ul>
+                    <li><a href="/user" title="Dirigite a tu perfil">Mi perfil</a></li>
+                    <li><a href="#" title="Mirá tus compras anteriores">Mis compras</a></li>
+                    <li><a href="/" title="Cerrá sesión">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+            <li class="navList"><a href="/shop" title="¡Revisá tu carrito de compras!"><img
+                        src="../../images/vec_cart.svg" alt="Icono de carrito de compras"> <span id="shopNum">
+                        0</span></a></li>
 
-<script src="../../scripts/shopFun.js"></script>
+        </ul>
+    </nav>
+    <!-- header -->
+    <header>
+        <h1>¡Aquí podrás encontrar nuestros productos hechos con materiales 100% reciclables! Echa un vistazo</h1>
+    </header>
+    <!-- aside -->
+    <div id="container">
+        <aside>
+            <h2>Categorias</h2>
+            <ul>
+                <li><a id="CP" href="/products/Cuidado%20personal">Cuidado Personal</a>
+                <li>
+                <li><a id="DE" href="/products/Decoración%20de%20exteriores">Decoración de exterior</a></li>
+                <li><a id="HP" href="/products/Higiene%20personal">Higiene Personal</a>
+                <li>
+                <li><a id="PF" href="/products/Perfumes%20y%20fragancias#">Perfumes y fragancias</a></li>
+            </ul>
+
+            <h2>Costo de envio</h2>
+            <ul>
+                <li id="liG" class="space">Gratis <span id="bg-gr" class="toogleOff"><span id="ball-gr"
+                            class="ball ballOff"> </span></span></li>
+            </ul>
+
+            <h2>Tipo de entrega</h2>
+            <ul>
+                <li id="liRet" class="space">Retiro en el local <span id="bg-ret" class="toogleOff"><span id="ball-ret"
+                            class="ball ballOff"> </span></span></li>
+                <li id="liEn" class="space">Con envio <span id="bg-en" class="toogleOff"><span id="ball-en"
+                            class="ball ballOff"> </span></span></li>
+            </ul>
+
+        </aside>
+        <!-- Card producto -->
+        <article>
+            <h2 id="catTitle">Nuestros productos</h2>
+            <div class="containerProd">
+            </div>
+        </article>
+    </div>
+
+    <script src="../../scripts/shopFun.js"></script>
 </body>
+
 </html>
